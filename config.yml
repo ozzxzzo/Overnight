@@ -1,21 +1,25 @@
 version: 1
 accounts:
-- name: alice
+- name: oxo
   coins:
   - 20000token
   - 200000000stake
-- name: bob
+- name: eika
   coins:
   - 10000token
   - 100000000stake
-client:
-  openapi:
-    path: docs/static/openapi.yml
-faucet:
-  name: bob
+  faucet:
+  name: eika
   coins:
   - 5token
   - 100000stake
+client:
+  typescript:
+    path: ts-client
+  composables:
+    path: vue/src/composables
+  openapi:
+    path: docs/static/openapi.yml
 validators:
-- name: alice
+- name: oxo
   bonded: 100000000stake
